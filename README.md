@@ -1,1 +1,3 @@
 # 401Assignments
+
+Reading Notes

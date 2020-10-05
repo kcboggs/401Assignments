@@ -35,3 +35,14 @@ Metasploit comes with Kali Linux but is also avaiable for download at https://ww
 
 https://www.csoonline.com/article/3379117/what-is-metasploit-and-how-to-use-this-popular-hacking-tool.html
 
+# METERPRETER
+
+> "Meterpreter is a Metasploit attack payload that provides an interactive shell from which an attacker can explore the target machine and execute code."
+
+### WHAT ARE METERPRETER GOALS?
+"Meterpreter uses a reverse_tcp shell, which means it connects to a listener on the attacker’s machine"
+
+### WHAT DOES PAYLOAD MEAN?
+"An exploit module, one of the three types (singles, stagers, stages) used by the Metasploit framework"
+
+https://doubleoctopus.com/security-wiki/threats-and-tools/meterpreter/

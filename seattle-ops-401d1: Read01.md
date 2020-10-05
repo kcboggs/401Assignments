@@ -18,19 +18,19 @@
 
 https://www.kali.org/docs/introduction/what-is-kali-linux/
 
-# What is Metasploit
+### What is Metasploit
 > "Metasploit is a penetration testing framework that makes hacking simple. It's an essential tool for many attackers and defenders."
 
-# Histroy of Metasploit
+### Histroy of Metasploit
 It was worked on by HD Moore and released 1.0 which was wriiten in Perl in 2003.
 
-# How to use Metasploit
+### How to use Metasploit
 Metasploit integrates seamlessly with Nmap, SNMP scanning and Windows patch enumeration while in the gathering information phase.
 
-# How to learn Metasploit
+### How to Learn Metasploit
 There are several free and inexpensive resources available to learn metaspl0it such as Kali Linux
 
-# Whre to download Metasploit
+### Where to Download Metasploit
 Metasploit comes with Kali Linux but is also avaiable for download at https://www.metasploit.com/
 
 https://www.csoonline.com/article/3379117/what-is-metasploit-and-how-to-use-this-popular-hacking-tool.html

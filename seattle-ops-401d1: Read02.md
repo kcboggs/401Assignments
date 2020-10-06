@@ -32,9 +32,34 @@ _SOC analysts are organized in four tiers_
 * Management of many security tools  
 * Resource allocation  
 
- 
-
-
-
 https://www.exabeam.com/security-operations-center/security-operations-center-a-quick-start-guide/
 
+# Nagios Monitoring Tool  
+> "Nagios is an open source tool that is widely used to monitor the systems, infrastructure, and networks so that performance bottlenecks can be identified. "
+
+###  Services Offered
+_Different types of network services can be monitored like SMTP, HTTP, POP2, SNMP, NNTP, SSH. FTP and many more networking services._
+
+### Importance of Nagios
+_The tool helps to detect the problems present in the network and also helps to find the solutions related to problems._
+
+###  Nagios Features
+* Easily manageable  
+* Helps to manage the logs and database systems  
+* Provides an informative web interface and easy to use interface  
+* Sends immediate alerts  
+* Bottlenecks can be identified  
+* Capable to fix the issues automatically  
+* Offers several types of monitoring of network services like SMTP, HTTP, FTP, POP, SNMP, SSH, and many other network services  
+* Offers flexibility for the multi-user access at the same time so that monitoring can be done for network components
+
+
+
+
+
+
+
+
+
+
+https://www.educba.com/nagios-monitoring-tool/

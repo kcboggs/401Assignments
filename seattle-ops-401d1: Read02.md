@@ -50,9 +50,9 @@ _The tool helps to detect the problems present in the network and also helps to 
 * Sends immediate alerts  
 * Bottlenecks can be identified  
 * Capable to fix the issues automatically  
-* Offers several types of monitoring of network services like SMTP, HTTP, FTP, POP, SNMP, SSH, and many other network services  
-* Offers flexibility for the multi-user access at the same time so that monitoring can be done for network components
-
+* Offers several types of monitoring of network services like SMTP, HTTP, FTP, POP, SNMP, SSH
+* Offers flexibility for the multi-user access at the same time 
+* Strongest features is failover capability and continuous monitoring 
 
 
 

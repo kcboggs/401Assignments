@@ -54,12 +54,4 @@ _The tool helps to detect the problems present in the network and also helps to 
 * Offers flexibility for the multi-user access at the same time 
 * Strongest features is failover capability and continuous monitoring 
 
-
-
-
-
-
-
-
-
 https://www.educba.com/nagios-monitoring-tool/

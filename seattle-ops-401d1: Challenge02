@@ -6,12 +6,13 @@
 # Description of purpose     Uptime Sensor Tool
 ####################################################
 
-import os
+import os, time
 
-ip_list = ["127.0.0.1"]
-for ip in ip_list:
-    response = os.popen(f"ping {ip}").read()
-    if "Received = 4" in response:
+while True:
+    ip="127.0.0.1"
+    response = os.system(f"ping {ip}")
+    if 0 == response:
         print(f"UP {ip} Ping Successful")
     else:
         print(f"DOWN {ip} Ping Unsuccessful")
+    time.sleep(2)

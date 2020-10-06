@@ -1,0 +1,17 @@
+#!/user/bin/env python3
+####################################################
+# Script Name                Ops Challenge 01
+# Author                     Kimberley Cabrera-Boggs
+# Date of last revision      October 6, 2020
+# Description of purpose     Uptime Sensor Tool
+####################################################
+
+import os
+
+ip_list = ["127.0.0.1"]
+for ip in ip_list:
+    response = os.popen(f"ping {ip}").read()
+    if "Received = 4" in response:
+        print(f"UP {ip} Ping Successful")
+    else:
+        print(f"DOWN {ip} Ping Unsuccessful")

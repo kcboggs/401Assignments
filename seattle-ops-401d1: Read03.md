@@ -21,3 +21,14 @@ But before we dig into the varying types of audits, let’s first discuss who ca
 * Make It a Team Effort  
 
 https://www.dnsstuff.com/it-security-audit
+
+## HOW TO BECOME A SECURITY AUDITOR
+
+> "Security auditors carry a great load of responsibility they need to ensure that a company or governmental agency is safe from criminal and terrorist  
+behaviors. Since most businesses and agencies keep the lion's share of their records in digital databases, these must be appropriately protected with   
+firewalls, encryption and other security measures.These databases need to be tested periodically to ensure that they comply with the latest IT standards  
+and practices." 
+
+## SECURITY AUDITOR VS. PENETRATION TESTER
+> "A security auditor seeks to assess a computer system based on established standards and will make recommendations to help the system become compliant."  
+A pentester has the job of finding and exploiting vulnerabilities. 

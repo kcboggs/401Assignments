@@ -1,3 +1,3 @@
 # 401Assignments
 
-Reading Notes
+Reading Notes and ops challenges

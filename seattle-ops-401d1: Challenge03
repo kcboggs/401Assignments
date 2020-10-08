@@ -1,0 +1,39 @@
+
+
+import os, time
+import smtplib
+from pythonping import ping
+from email.message import EmailMessage
+while(1):
+    try:
+        ip="127.0.0.1"
+        # Create SMTP session
+        s = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+        # Start TLS for security
+        s.ehlo()
+        # Authentication
+        s.login("opschallenge04@gmail.com", "Thisisstupid23!")
+        # Instance of email message
+        msg = EmailMessage()
+        # Write the subject
+        msg["Subject"]= " I know you see me."
+        msg["From"]="opschallenge04@gmail.com"
+        msg["To"]="opschallenge04@gmail.com"
+        response = os.system(f"ping -c 1 " +ip)
+        if 0 == response:
+            text=f"{time.ctime()} UP {ip} Ping Successful"
+        else:
+            text=f"{time.ctime()} DOWN {ip} Ping Unsuccessful"
+        # Attach the content with the msg instance
+        msg.set_content(text)
+        # Sending the mail
+        s.send_message(msg)
+        s.quit()
+        print('sent')
+        time.sleep(2)
+    except:
+        print('site is down yet...')
+        print('sleeping...')
+        # Sleeping for 10 seconds
+        time.sleep(10)
+        print('Trying again')

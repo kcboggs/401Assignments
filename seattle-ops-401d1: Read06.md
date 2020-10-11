@@ -39,5 +39,4 @@ https://www.jscape.com/blog/implementing-the-cia-triad-when-transferring-files-t
 
 Hashes are the products of cryptographic algorithms designed to produce a string of characters.
 
-![Hash](Hash Verification.png)
 

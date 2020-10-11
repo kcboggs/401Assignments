@@ -37,6 +37,13 @@ https://www.jscape.com/blog/implementing-the-cia-triad-when-transferring-files-t
 
 ## How Hashes Work, and How They’re Used for Data Verification
 
-Hashes are the products of cryptographic algorithms designed to produce a string of characters.
+_Hashes are the products of cryptographic algorithms designed to produce a string of characters. MD5, SHA-1, and SHA-256 are all different hash functions._
 
+## Some Hashes are Cryptographically Signed for Even More Security
+
+> "While hashes can help you confirm a file wasn’t tampered with, there’s still one avenue of attack here. An attacker could gain control of a Linux distribution’s website and modify the hashes that appear on it, or an attacker could perform a man-in-the-middle attack and modify the web page in transit if you were accessing the website via HTTP instead of encrypted HTTPS."
+
+> "That’s why modern Linux distributions often provide more than hashes listed on web pages. They cryptographically sign these hashes to help protect against attackers that might attempt to modify the hashes. You’ll want to verify the cryptographic signature to ensure the hash file was actually signed by the Linux distribution if you want to be absolutely sure the hash and file weren’t tampered with." 
+
+https://www.howtogeek.com/67241/htg-explains-what-are-md5-sha-1-hashes-and-how-do-i-check-them/
 

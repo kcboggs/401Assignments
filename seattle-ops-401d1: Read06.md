@@ -19,6 +19,15 @@ _Ensures that information and resources are available to those who need them._
 with this approach is that it can be quite complex and would therefore require considerable time and expertise before you can come up with a complete
 solution. A better option would be to find a single solution that already incorporates all three elements (and possibly more)._
 
+An example of JSCAPE MFT Server, a managed file transfer server that already includes:
 
+* Data-in-motion encryption through secure file transfer protocols like FTPS, SFTP, HTTPS, WebDAVs, AS2 over HTTPS, and OFTP (secured by SSL)  
+* Data-at-rest encryption through OpenPGP   
+* End-to-end encryption, which can be achieved through automation-enabling features known as triggers.   
+* 2-factor authentication  
+* Data integrity checking mechanisms that employ hash functions and digital signatures.  
+* Built-in support for High Availability configurations, active-active and active-passive  
+* Data Loss Prevention (DLP), which automatically detects the presence of sensitive data and take appropriate action (e.g. cancel the download or apply encryption)  
+* 
 
 https://www.jscape.com/blog/implementing-the-cia-triad-when-transferring-files-through-the-internet

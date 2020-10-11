@@ -28,6 +28,16 @@ An example of JSCAPE MFT Server, a managed file transfer server that already inc
 * Data integrity checking mechanisms that employ hash functions and digital signatures.  
 * Built-in support for High Availability configurations, active-active and active-passive  
 * Data Loss Prevention (DLP), which automatically detects the presence of sensitive data and take appropriate action (e.g. cancel the download or apply encryption)  
-* 
 
 https://www.jscape.com/blog/implementing-the-cia-triad-when-transferring-files-through-the-internet
+
+# What Are MD5, SHA-1, and SHA-256 Hashes
+
+> "These seemingly random strings of text allow you to verify files you download aren’t corrupted or tampered with. You can do this with the commands built into Windows, macOS, and Linux."
+
+## How Hashes Work, and How They’re Used for Data Verification
+
+Hashes are the products of cryptographic algorithms designed to produce a string of characters.
+
+![Hash Verification](image.png)
+

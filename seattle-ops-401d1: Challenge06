@@ -1,0 +1,98 @@
+#!/user/bin/env python3
+######################################################
+# Script Name                Ops Challenge 06
+# Author                     Kimberley Cabrera-Boggs
+# Date of last revision      October 12, 2020
+# Description of purpose     File Encryption Script 1
+######################################################
+
+
+ #     _______ __        ______                            __  _           
+ #    / ____(_) /__     / ____/___  ____________  ______  / /_(_)___  ____ 
+ #   / /_  / / / _ \   / __/ / __ \/ ___/ ___/ / / / __ \/ __/ / __ \/ __ \
+ #  / __/ / / /  __/  / /___/ / / / /__/ /  / /_/ / /_/ / /_/ / /_/ / / / /
+ # /_/   /_/_/\___/  /_____/_/ /_/\___/_/   \__, / .___/\__/_/\____/_/ /_/ 
+ #                                       /____/_/                        
+
+
+
+  
+import os
+from cryptography.fernet import Fernet
+import time
+
+# Declare Variable
+file = "opscha06.txt"
+
+# Declare functions
+# function to load interface
+def interface():
+    print("""
+    Please select a mode.
+    1) Encrypt a file (mode 1)
+    2) Decrypt a file (mode 2)
+    3) Encrypt a message (mode 3)
+    4) Decrypt a message (mode 4)
+    5) exit
+    """)
+
+    userInput = input("option ? ")
+    if(userInput == "1"):
+        encryptFile()
+        ## Encrypt file here
+        print("")
+    elif(userInput == "2"):
+        decryptFile()
+        ## Encrypt file here
+        print("")
+    elif (userInput == "3"):
+        ## Encrypt file here
+        print("")
+    elif (userInput == "4"):
+        ## Encrypt file here
+        print("")
+    elif (userInput == "5"):
+        ## Encrypt file here
+        print("Thank you")
+        exit(0)
+    else:
+        print("please insert correct input here")
+        interface()
+
+def encryptFile():
+    f = Fernet(key)
+    with open(file, "rb") as fileread:
+        readfile = fileread.read()
+    encryptFile = f.encrypt(readfile)
+    with open(file, "wb") as filewrite:
+        filewrite.write(encryptFile)
+        time.sleep(2)
+        print("successful your file has been encrypted")
+
+def decryptFile():
+    f = Fernet(key)
+    with open(file, "rb") as fileread:
+        # read the encrypted data
+        encrypted_data = fileread.read()
+    # decrypt data
+    decrypted_data = f.decrypt(encrypted_data)
+    # write the original file
+    with open(file, "wb") as filewrite:
+        filewrite.write(decrypted_data)
+
+def generateKey():
+    key = Fernet.generate_key()
+    with open("demo.key", "wb") as key_file:
+        key_file.write(key)
+
+def loadKey():
+    return open("demo.key", "rb").read()
+
+# main
+generateKey()
+key = loadKey()
+while (True):
+    interface()
+
+# End
+

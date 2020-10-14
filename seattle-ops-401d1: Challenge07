@@ -1,0 +1,86 @@
+#!/user/bin/env python3
+######################################################
+# Script Name                Ops Challenge 07
+# Author                     Kimberley Cabrera-Boggs
+# Date of last revision      October 13, 2020
+# Description of purpose     File Encryption 2
+######################################################
+
+
+#     _______ __        ______                            __  _                ___ 
+#    / ____(_) /__     / ____/___  ____________  ______  / /_(_)___  ____     |__ \
+#   / /_  / / / _ \   / __/ / __ \/ ___/ ___/ / / / __ \/ __/ / __ \/ __ \    __/ /
+#  / __/ / / /  __/  / /___/ / / / /__/ /  / /_/ / /_/ / /_/ / /_/ / / / /   / __/ 
+# /_/   /_/_/\___/  /_____/_/ /_/\___/_/   \__, / .___/\__/_/\____/_/ /_/   /____/ 
+#                                         /____/_/                                 
+
+import os
+import math,time
+from cryptography.fernet import Fernet
+import time
+
+# Declare Variable
+file = "opschallenge.txt"
+path = "./labo07"
+
+def interface():
+    print("""
+    Please select a mode.
+    1) Encrypt a file (mode 1)
+    2) Decrypt a file (mode 2)
+    3) Encrypt a message (mode 3)
+    4) Decrypt a message (mode 4)
+    5) exit
+    """)
+
+    userInput = input("option ? ")
+    if(userInput == "1"):
+        encryptFile()
+        ## Encrypt file here
+        print("")
+    elif(userInput == "2"):
+        decryptFile()
+        ## Encrypt file here
+        print("")
+    elif (userInput == "3"):
+        ## Encrypt file here
+        print("")
+    elif (userInput == "4"):
+        ## Encrypt file here
+        print("")
+    elif (userInput == "5"):
+        ## Encrypt file here
+        print("Thank you")
+        exit(0)
+    else:
+        print("please insert correct input here")
+        interface()
+
+def getFiles(dirNames):
+    completeFileList = list()
+    for (dirPath, dirName, fileName) in os.walk(dirNames):
+        completeFileList += [os.path.join(dirPath, file) for file in fileName] 
+    for fil in completeFileList:    
+
+def encryptFile(file, key):
+    f = Fernet(key)
+    with open(file, "rb") as fileread:
+        readfile = fileread.read()
+    encryptFile = f.encrypt(readfile)
+    with open(file, "wb") as filewrite:
+        filewrite.write(encryptFile)
+        time.sleep(2)
+        print("Viola!!! Your file has been encrypted")
+
+def decryptFile(file, key):
+    f = Fernet(key)
+    with open(file, "rb") as fileread:
+        # read the encrypted data
+        encrypted_data = fileread.read()
+    # decrypt data
+    decrypted_data = f.decrypt(encrypted_data)
+    # write the original file
+    with open(file, "wb") as filewrite:
+        filewrite.write(decrypted_data)
+
+getFiles(path)

@@ -1,1 +1,150 @@
+#!/user/bin/env python3
+----------------------------------------------------
+# Script Name                Ops Challenge 08
+# Author                     Kimberley Cabrera-Boggs
+# Date of last revision      October 13, 2020
+# Description of purpose     File Encryption 3
+----------------------------------------------------
 
+  ,-~~-.___.
+ / |  '     \
+(  )         0
+ \_/-, ,----'
+    ====           //
+   /  \-'~;    /~~~(O)
+  /  __/~|   /       |
+=(  _____| (_________|
+
+
+from cryptography.fernet import Fernet
+import time
+import os
+path = “./anotherOne”
+
+# Declare Variable
+file2 = “opschallenge.txt”
+output = “”
+
+# Declare functions
+# function to load interface
+def interface():
+    global output
+    print(“”"
+    Please select a mode.
+    1) Encrypt a file (mode 1)
+    2) Decrypt a file (mode 2)
+    3) Encrypt a message (mode 3)
+    4) Decrypt a message (mode 4)
+    5) Encrypt a folder (mode 5)
+    6) Decrypt a folder (mode 6)
+    7) exit
+    “”")
+    userInput = input(“option ? “)
+    if(userInput == “1”):
+        encryptFile(file2, key)
+
+        ## Encrypt file here
+        print(“”)
+    elif(userInput == “2”):
+        decryptFile(file2, key)
+
+        ## Encrypt file here
+        print(“”)
+    elif (userInput == “3”):
+        output = encryptMessage()
+
+        ## Encrypt file here
+        print(“”)
+    elif (userInput == “4”):
+        decryptMessage(output)
+
+        ## Encrypt file here
+        print(“”)
+    elif(userInput == “5”):
+        encrptFolder(path)
+
+        ## Encrypt folder here
+        print(“”)
+    elif(userInput == “6”):
+        decryptFolder(path)
+
+        ## Encrypt folder here
+        print(“”)
+    elif (userInput == “7”):
+
+        ## Encrypt file here
+        print(“Thank you using this application”)
+        exit(0)
+    else:
+        print(“put right input here”)
+        interface()
+def encryptFile(file, key):
+    
+    f = Fernet(key)
+    with open(file, “rb”) as fileread:
+        readfile = fileread.read()
+    encryptFile = f.encrypt(readfile)
+    with open(file, “wb”) as filewrite:
+        filewrite.write(encryptFile)
+        time.sleep(2)
+        print(“file has been encrypted”)
+
+def decryptFile(file, key):
+    f = Fernet(key)
+    with open(file, “rb”) as fileread:
+
+        # read the encrypted data
+        encrypted_data = fileread.read()
+
+    # decrypt data
+    decrypted_data = f.decrypt(encrypted_data)
+
+    # write the original file
+    with open(file, “wb”) as filewrite:
+        filewrite.write(decrypted_data)
+        time.sleep(2)
+        print(“file has been decrypted”)
+
+def generateKey():
+    key = Fernet.generate_key()
+    with open(“last.key”, “wb”) as key_file:
+        key_file.write(key)
+
+def loadKey():
+    return open(“last.key”, “rb”).read()
+
+# Encrypt a message (mode 3)
+def encryptMessage():
+    f = Fernet(key)
+    userMessage = input (“Enter your message to encrypt.“).encode()
+    encryptedMessage = f.encrypt(userMessage)
+    print (encryptedMessage)
+    return encryptedMessage
+
+def decryptMessage(msg):
+    f = Fernet(key)
+    decryptMsg = f.decrypt(msg)
+    print (decryptMsg)
+
+def encrptFolder(dirNames):
+    completeFileList = list()
+    for (dirPath, dirName, fileName) in os.walk(dirNames):
+        completeFileList += [os.path.join(dirPath, file) for file in fileName]
+    for fil in completeFileList:
+        print(fil)
+        encryptFile(fil, key)
+
+def decryptFolder(dirNames):
+    completeFileList = list()
+    for (dirPath, dirName, fileName) in os.walk(dirNames):
+        completeFileList += [os.path.join(dirPath, file) for file in fileName]
+    for fil in completeFileList:
+        print(fil)
+        decryptFile(fil, key)
+
+# main
+generateKey()
+key = loadKey()
+while (True):
+    interface()
+# End

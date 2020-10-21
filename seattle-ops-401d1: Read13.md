@@ -30,3 +30,5 @@ your own data center, with the benefits of using the scalable infrastructure of 
 VPC and the internet  
 * VPC endpoint — Enables you to privately connect your VPC to supported AWS services and VPC endpoint services   
 powered by PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection. 
+
+https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html

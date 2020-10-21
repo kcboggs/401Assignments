@@ -29,7 +29,7 @@ live_count = 0
 
 # ICMP ping request, get response host address
     if (host in (addresses.network_address, addresses.broadcast_address)):
-        # Igore network and broadcast address
+        # Ignore network and broadcast addresses
 
     resp = sr1(
         IP(dst=str(host))/ICMP(),
@@ -38,14 +38,14 @@ live_count = 0
     )
 
     if resp is None:
-        print(f"{host} is down or not responding.")
+        print(f"{host} is down or unresponsive.")
     elif (
         int(resp.getlayer(ICMP).type)==3 and
         int(resp.getlayer(ICMP).code) in [1,2,3,9,10,13]
     ):
-        print(f"{host} is blocking ICMP.")
+        print(f"{host} is actively blocking ICMP.")
     else:
-        print(f"{host} is responding.")
+        print(f"{host} is actively responding.")
         live_count += 1
 
-print(f"{live_count}/{addresses.num_addresses} hosts are online.")
+print(f"{live_count}/{addresses.num_addresses} the hosts are online.")

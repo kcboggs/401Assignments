@@ -15,17 +15,15 @@ instance, or a Network Load Balancer that has a UDP listener."
 • Configure the traffic mirror session for Source B, Filter A, and Target D  
 
 _After you create the traffic mirror session, any traffic that matches the filter rules is encapsulated in a
-VXLAN header. It is then sent to the target._
-• There must be UDP listeners on port 4789.
-• If all of the Network Load Balancer traffic mirror targets in an Availability Zone become unhealthy, the
-mirrored traffic can still be sent to traffic mirror targets in other zones
+VXLAN header. It is then sent to the target._    
+
 **Traffic mirror targets**
 _the destination for mirrored traffic_
 
 • A network interface  
 • A Network Load Balancer  
 
-**Network Load Balancer considerations**  
+**Network Load Balancer considerations**    
 • There must be UDP listeners on port 4789.  
 • If all of the Network Load Balancer traffic mirror targets in an Availability Zone become unhealthy, the  
 mirrored traffic can still be sent to traffic mirror targets in other zones

@@ -65,6 +65,8 @@ def part1_lab(host):
             else:
                 #----------Filter port and drop-------------------#
                 print("The port is filtered and dropped")
+                
+#--------------------------Part 2 of 3----------------------------#                
 def part2_lab():
     network = input("Enter your network address with the CIDR block code: ")
     addresses = ipaddress.IPv4Network(network)
@@ -88,6 +90,8 @@ def part2_lab():
             print(f"{host} is responding.")
             host_count += 1
     print(f"{host_count}/{addresses.num_addresses} hosts are online.")
+
+#--------------------------Part 3 of 3-------------------------------#   
 def part3_lab():
     request = ARP()
     request.pdst = input("Enter your ip with the CIDR block: ")

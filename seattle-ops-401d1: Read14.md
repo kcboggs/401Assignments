@@ -62,28 +62,9 @@ target._
 
 # Getting started with Traffic Mirroring
 
-### Step 1: Create the traffic mirror target
-_Create a traffic mirror target_  
-1. Open the Amazon VPC console at https://console.aws.amazon.com/vpc/.  
-2. In the Region selector, choose the AWS Region that you used when you created the VPCs.    
-3. On the navigation pane, choose Traffic Mirroring, Mirror Targets.  
-4. Choose Create Traffic Mirror Target.  
-5. For Name tag, enter a name for the traffic mirror target.  
-6. (Optional) For Description, enter a description for the traffic mirror target.  
-7. For Target type, choose the traffic mirror target type.  
-8. For Target, choose the traffic mirror target.  
-9. (Optional) Add or remove a tag.  
-[Add a tag] Choose Add tag and do the following:  
-  • For Key, enter the key name.  
-  • For Value, enter the key value.    
-[Remove a tag] Next to the tag, choose Remove tag.  
-10. Choose Create.  
-
-
-
-
-
-
+### Step 1: Create the traffic mirror target  
+### Step 2: Create the traffic mirror filter  
+### Step 3: Create the traffic mirror session  
+### Step 4: Analyze the data  
 
 https://docs.aws.amazon.com/vpc/latest/mirroring/vpc-tm.pdf#traffic-mirroring-how-it-works
-

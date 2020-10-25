@@ -30,7 +30,8 @@ Once an attacker has found a weakness, their next step is find or create the att
 * Social Engineering Toolkit, if they’ve decided they will deliver the malware through a Social Engineering campaign.   
 
 ### Delivery
-By this point, the attacker has selected the weapon based on their earlier reconnaissance.  
+By this point, the attacker has selected the weapon based on their earlier reconnaissance.   
+
 Examples of delivery channels are:   
 * Websites (malicious or clean): An attacker can infect a legitimate website they know your users frequent.  
 * Social media: Cat phishing via social networks is a very effective way to gain trust  
@@ -39,7 +40,7 @@ Examples of delivery channels are:
   1% of a 20k enterprise corporation click on a link, I’ve successfully infected 20 people.  
 * USB: Common attack to leave infected USB’s in public areas and around employee’s car hoping the temptation is too much.   
 
-
+_DKIM and SPF are email authentication method to detect spoofed emails. SPF makes sure that emails are coming from the authorized IP of the domain while DKIM uses digital signatures. Both techniques help to make sure emails are coming from legitimate, authorized channels._ 
 
 
 

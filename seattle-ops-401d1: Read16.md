@@ -20,12 +20,14 @@ The two different stages of reconnaissance are passive and active
 
 During **Passive** reconnaissance, an attacker will use indirect methods to gather information from publicly available sources like WHOIS, ARIN registrations, Google, Shodan, Job Listings and  company websites.
 Once an attacker has collected as much public information as possible, the attacker will move on to **Active** reconnaissance, which involves some level of interaction with your organizations. 
-
+_The entire goal of the reconnaissance phase is to find a weakness that can be exploited. Once the attacker has found that weakness, they can move on to the next step._
 
 
 ### Weaponization
 Once an attacker has found a weakness, their next step is find or create the attack that will exploit the vulnerability
-
+* Metasploit or exploit-db for publicly available exploits  
+* The Veil framework is commonly used to generate evasion code for malware  
+* Social Engineering Toolkit, if they’ve decided they will deliver the malware through a Social Engineering campaign.   
 
 
 

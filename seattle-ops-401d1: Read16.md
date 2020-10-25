@@ -24,13 +24,20 @@ _The entire goal of the reconnaissance phase is to find a weakness that can be e
 
 
 ### Weaponization
-Once an attacker has found a weakness, their next step is find or create the attack that will exploit the vulnerability
+Once an attacker has found a weakness, their next step is find or create the attack that will exploit the vulnerability  
 * Metasploit or exploit-db for publicly available exploits  
 * The Veil framework is commonly used to generate evasion code for malware  
 * Social Engineering Toolkit, if they’ve decided they will deliver the malware through a Social Engineering campaign.   
 
-
-
+### Delivery
+By this point, the attacker has selected the weapon based on their earlier reconnaissance.  
+Examples of delivery channels are:   
+* Websites (malicious or clean): An attacker can infect a legitimate website they know your users frequent.  
+* Social media: Cat phishing via social networks is a very effective way to gain trust  
+* User input: The attacker has some level of interaction with a server (like a web server or a DB)  
+* Email: Attackers love phishing email because it works. Phishing is usually a numbers game. If only .    
+  1% of a 20k enterprise corporation click on a link, I’ve successfully infected 20 people.  
+* USB: Common attack to leave infected USB’s in public areas and around employee’s car hoping the temptation is too much.   
 
 
 

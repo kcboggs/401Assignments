@@ -42,17 +42,26 @@ Examples of delivery channels are:
 
 _DKIM and SPF are email authentication method to detect spoofed emails. SPF makes sure that emails are coming from the authorized IP of the domain while DKIM uses digital signatures. Both techniques help to make sure emails are coming from legitimate, authorized channels._ 
 
+Some other effective measures include: 
+* Webfiltering can prevent a user from accessing questionable or known bad sites  
+* Disabling USB and not giving any user “admin” rights also prevents a big portion of delivery mechnism that malware can use  
+* DNS Filtering: While web filtering blocks web request destined to malicious sites, using a DNS security solution can block any DNS lookup attempt to prevent connections over any protocol. I always use this is combination with web filtering. 
 
+### Exploitation
+Protective measures are limited once an attacker has been able to execute the exploit but they do exist:   
+* DEP (Data Execution Prevention) is a software and hardware feature which attempts to prevent the execution of code in memory where it doesn’t belong.      
+* Anti-Exploit is a feature on some AV solutions that monitor known applications for unusual calls to memory.  
+Both of these techniques act as the last line of defense against common exploit attempts
 
+### Installation
+Some common payloads and techniques during this stage involve:  
+* DLL hijacking  
+* Injecting Meterpreter or other similar payloads  
+* Installing Remote Access Tools (or RAT)  
+* Registry changes to make my program automatically start up  
+* Executing Powershell in fileless attacks  
 
-
-
-
-
-
-
-
-
-
+### Command and Control
+_At this stage, the system has been completely compromised and in control of the attacker. If they completed the previous stage correctly, their access is persistent – even if you reboot or patch the vulnerability._
 
 https://thecisoperspective.com/index.php/2020/03/27/breaking-the-kill-chain-a-defensive-approach/

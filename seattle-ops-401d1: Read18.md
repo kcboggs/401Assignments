@@ -30,7 +30,7 @@ _Threat modelling at a whiteboard can be a fluid exchange of ideas between diver
 https://owasp.org/www-community/Application_Threat_Modeling
 
 # Guide to Data-Centric System Threat Modeling
-![](threatmodel.png)
+![Threat Model](threatmodel.png)
 
 
 https://csrc.nist.gov/publications/detail/sp/800-154/draft#pubs-abstract-header

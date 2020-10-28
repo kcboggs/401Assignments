@@ -30,7 +30,7 @@ _Threat modelling at a whiteboard can be a fluid exchange of ideas between diver
 https://owasp.org/www-community/Application_Threat_Modeling
 
 # Guide to Data-Centric System Threat Modeling
-![Threat Model](threatmodel.png)
-
+> "Threat modeling is a form of risk assessment that models aspects of the attack and defense sides of a particular logical entity, such 
+as a piece of data, an application, a host, a system, or an environment."
 
 https://csrc.nist.gov/publications/detail/sp/800-154/draft#pubs-abstract-header

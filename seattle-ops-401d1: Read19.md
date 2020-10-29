@@ -9,11 +9,11 @@
 * Denial of Service  
 * Elevation of Privilege  
 ### Spoofing
+* Single Key  
+* Access Token  
+* Signatures
 **Common authentication methods for systems and what would be required to spoof a request**  
-* Single Key  A sophisticated elevation of privilege attack may use all of the other areas of STRIDE for an especially outsized impact_
-### Use STRIDE In Your Work
-**Practice**
-* Signatures  
+_A sophisticated elevation of privilege attack may use all of the other areas of STRIDE for an especially outsized impact_
 ### Tampering
 _Often, data tampering coincides with other potential threats._
 ### Repudiation

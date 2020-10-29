@@ -51,6 +51,8 @@ import time
 import getpass
 import itertools
 from pexpect import pxssh 
+import zipfile
+from tqdm import tqdm
 #--------------------------Function-----------------------------#
 def user_selection():
     user_choice=input("""
@@ -58,6 +60,7 @@ def user_selection():
     1. Mode 1
     2. Mode 2
     3. Mode 3
+    3. Mode 4
     4. Exit
     """)
 # if conditional statment
@@ -140,6 +143,24 @@ def mode3():
     except pxssh.ExceptionPxssh as e:
         print("pxssh failed on login.")
         print(e)
+
+#----------Mode 4------------# 
+def mode4():
+  
+zip_file = zipfile.ZipFile(zip_file)
+n_words = len(list(open(wordlist, "rb")))
+print("Total passwords to test:", n_words)
+
+with open(word_list, "rb") as word_list:
+    for word in tqdm(word_list, total=n_words, unit="word"):
+        try:
+            zip_file.extractall(pwd=word.strip())
+        except:
+            continue
+        else:
+            print("[+] Password found:", word.decode().strip())
+            exit(0)
+print("[!] Password not found, try other word_list.")
 
 #----------------------------Main-------------------------------#
 user_selection()

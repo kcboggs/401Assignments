@@ -17,10 +17,37 @@ You can choose to deploy and manage the ELK stack yourself. But, would you prefe
 https://aws.amazon.com/elasticsearch-service/the-elk-stack/
 
 # A Framework for Cyber Threat Hunting  
-**What is hunting?  
-**HMM  
-**Hunting Loop  
-**Hunt Matrix  
+1. What is hunting? 
+_the process of proactively and iteratively
+searching through networks to detect and isolate advanced threats that evade existing
+security solutions._  
+2.HMM    
+_The Hunting Maturity Model, rst developed by Sqrrl’s own security technologist and chief hunter,
+David J. Bianco, describes five levels of organizational hunting capability, ranging from HM0 (the
+least capable) to HM4 (the most)._  
+* HM0 - INITIAL  
+* HM1 - MINIMAL  
+* HM2 - PROCEDURAL  
+* HM3 - INNOVATIVE  
+* HM4 - LEADING  
+3. Hunting Loop    
+_The goal of a hunt team should
+be to get through the loop as quickly and effectively as possible._  
+* Hypothesis Generation  
+* Tool and Technique Enabled Investigation   
+* Pattern and TTP Discovery    
+* Automated Analytics    
+4. Hunt Matrix   
+_» Maturing hypothesis creationis dependent on crafting increasingly more dynamic questions, and
+moving from manual hypothesis creation to automatic generation via risk scoring analytics._  
+_» Maturing the tools and techniques used to follow up on hypotheses is dependent on moving from
+using simple searches and histograms to using tools with advanced visualizations and graph
+search capabilities._  
+_» Maturing your pattern and TTP detectionis dependent on expanding the kinds of Indicators of
+» Finally, maturing analytics and automation is dependent on moving from simple analytics such as
+stack counting, to advanced and automated analytics powered by machine learning, and moving
+from repeated searches to feeding gathered information back into your automated detection
+systems._
 
 
 https://www.threathunting.net/files/framework-for-threat-hunting-whitepaper.pdf

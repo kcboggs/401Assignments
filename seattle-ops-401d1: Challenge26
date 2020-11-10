@@ -1,0 +1,88 @@
+#!/user/bin/env python3
+#----------------------------------------------------#
+# Script Name                Ops Challenge 16
+# Author                     Kimberley Cabrera-Boggs
+# Date of last revision      November 09, 2020
+# Description of purpose     Event Logging
+#----------------------------------------------------#
+print("""
+
+███████ ██    ██ ███████ ███    ██ ████████     ██       ██████   ██████   ██████  ██ ███    ██  ██████  
+██      ██    ██ ██      ████   ██    ██        ██      ██    ██ ██       ██       ██ ████   ██ ██       
+█████   ██    ██ █████   ██ ██  ██    ██        ██      ██    ██ ██   ███ ██   ███ ██ ██ ██  ██ ██   ███ 
+██       ██  ██  ██      ██  ██ ██    ██        ██      ██    ██ ██    ██ ██    ██ ██ ██  ██ ██ ██    ██ 
+███████   ████   ███████ ██   ████    ██        ███████  ██████   ██████   ██████  ██ ██   ████  ██████  
+                                                                                                       
+""")
+#---------------------Import Libraries---------------#
+import logging
+import time
+import getpass
+import itertools
+from pexpect import pxssh 
+import zipfile
+from tqdm import tqdm
+#---------------------Function------------------------#
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%m/%d/%Y %H:%M:%S')
+         
+logging.debug("Debug message")
+logging.info("Informative message")
+logging.warning("Warnig message")
+logging.error("Error message")
+logging.critical("Critical message")
+
+def user_selection():
+    user_choice=input("""
+    select a mode:
+    1. Mode 1
+    2. Mode 2
+    3. Mode 3
+    3. Mode 4
+    4. Exit
+    """)
+# if conditional statment
+    if(user_choice =="1"):
+      mode1()
+    elif(user_choice =="2"):
+      mode2()
+    elif(user_choice =="3"):
+      mode3()
+    else:
+      print("Exit")
+      exit()
+
+#-----------Mode 1-----------#
+def mode1():
+
+# Accept a user input word list file path and iterates through the word list assigning the word being read to a variable
+  word_list = input("Enter a Filename: ")
+
+  filename=open(word_list, "r", encoding= "ISO-8859-1")
+  fileline=filename.readlines()
+
+  for line in fileline:
+    print(line)
+# Adding a delay between words sleep for 2 seconds
+    time.sleep(1) 
+
+# The value of the variables will print to the screen
+#----------Mode 2------------# 
+def mode2():
+
+# Accepts a user input string
+    user_string=input("Enter a String: ")
+# Accepts a user input word list file path
+    word_list = input("Enter a Filename: ")
+# Search the word list for the user input string
+    filename=open(word_list, "r", encoding= "ISO-8859-1")
+    fileline=filename.read().splitlines()
+
+    for line in fileline:
+# if conditional statement
+      if str(line) == user_string:
+        print("Gotcha!!!")
+        break
+      else:
+        print("not this one!!!")
+    input()
+# Print to the screen whether the string appeared in the word list

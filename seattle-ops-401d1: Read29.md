@@ -12,6 +12,6 @@ https://www.activecountermeasures.com/what-is-threat-hunting-and-why-is-it-so-im
 https://www.activecountermeasures.com/
 
 ## The ThreatHunting Project
-
+Author David J Bianco - shares his work on threathunting along with several blog posts. 
 
 https://www.threathunting.net/sqrrl-archive

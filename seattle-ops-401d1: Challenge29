@@ -1,1 +1,58 @@
+#!/user/bin/env python3
+#----------------------------------------------------#
+# Script Name                Ops Challenge 28
+# Author                     Kimberley Cabrera-Boggs
+# Date of last revision      November 11, 2020
+# Description of purpose     Event Logging 3
+#----------------------------------------------------#
+print("""
 
+███████ ██    ██ ███████ ███    ██ ████████     ██       ██████   ██████   ██████  ██ ███    ██  ██████  
+██      ██    ██ ██      ████   ██    ██        ██      ██    ██ ██       ██       ██ ████   ██ ██       
+█████   ██    ██ █████   ██ ██  ██    ██        ██      ██    ██ ██   ███ ██   ███ ██ ██ ██  ██ ██   ███ 
+██       ██  ██  ██      ██  ██ ██    ██        ██      ██    ██ ██    ██ ██    ██ ██ ██  ██ ██ ██    ██ 
+███████   ████   ███████ ██   ████    ██        ███████  ██████   ██████   ██████  ██ ██   ████  ██████  
+                                                                                                       
+""")
+#---------------------Import Libraries---------------#
+import os
+import time
+import logging
+from logging.handlers import TimedRotatingFileHandler
+from logging.handlers import RotatingFileHandler
+
+#--------------------Create Logger-------------------#
+logger = logging.getLogger(__name__)
+print("Oh, Hello! Nice of you to stop by...")
+time.sleep(2)
+
+#--------------------Create Handler------------------#
+print("Wanna play a guessing game with me?")
+c_handler = logging.StreamHandler()
+f_handler = logging.FileHandler('file.log')
+c_handler.setLevel(logging.WARNING)
+f_handler.setLevel(logging.ERROR)
+time.sleep(2)
+
+#--------------------Create Formatters---------------#
+print("So because I work in the gaming industry, do you think I like to gamble?")
+c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+f_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+c_handler.setFormatter(c_format)
+f_handler.setFormatter(f_format)
+time.sleep(2)
+
+#-----------------Add handlers to the logger---------#
+print("Happy Guessing!")
+logger.addHandler(c_handler)
+logger.addHandler(f_handler)
+time.sleep(2)
+
+#------------Generate warning and error logs---------#
+print("You only get two guesses...")
+logger.warning('Warning you only get one more guess')
+logger.error('Your guess has caused an error')
+time.sleep(2)
+
+print("No more guessess. View 'file.log' to see results.")
+os.system("ls -al")

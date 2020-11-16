@@ -13,7 +13,4 @@
 —ARTFULPIE  
 —BUFFETLINE  
 
-**Unusual Name**
-
-
 https://archerint.com/what-are-yara-rules/

@@ -5,12 +5,15 @@
 
 **Clues** 
 
-_Six new malware samples allegedly in use by North Korea:_  
+### Six new malware samples allegedly in use by North Korea
 —BISTROMATH  
 —SLICKSHOES    
 —CROWDEDFLOUNDER   
 —HOTCROISSANT  
 —ARTFULPIE  
 —BUFFETLINE  
+
+**Unusual Name**
+
 
 https://archerint.com/what-are-yara-rules/

@@ -41,9 +41,3 @@ Step 6: Document the results
 * Sndbox  
 
 https://www.toolbox.com/security/data-security/articles/what-is-malware-analysis-definition-types-stages-best-practices/
-
-
-
-
-
-https://www.toolbox.com/security/data-security/articles/what-is-malware-analysis-definition-types-stages-best-practices/

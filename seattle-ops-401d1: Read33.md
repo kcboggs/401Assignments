@@ -10,6 +10,4 @@ _Windows binaries are packed in a format called Portable Executable, or PE._
 * Version  
 * Certificate  
 
-
-
 https://medium.com/@aubsec/pestudio-standard-f2ada4e8564

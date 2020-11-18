@@ -9,40 +9,35 @@
 import hashlib,datetime, os
 import getpass
 from time import sleep
-#--------------------------Variables-------------------#
-# Prompt the user to type in a file name to search for.
-fileName = input("Enter a file name ")
-# Prompt the user for a directory to search in.
-dirName = input("Enter a directory to search in ")
-#--------------------------Function--------------------#
-### Getting the user input to search specified folder
+#-------------------------Function---------------------#
+# Search user input for specified folder
 def get_hashcode():
-    folder_name = input("Documents? ")
-    output_search(folder_name)
-## Getting current time stamp
+    folderName = input("Enter the folder you want to scan? ")
+    output_search(folderName)
+# Get current time stamp
 def get_time():
     dateTimeObj = datetime.datetime.now()
     timestampStr = dateTimeObj.strftime("%b-%d-%Y-%H:%M:%S")
     return timestampStr
-# Outputting final results
+# Output final results
 def output_search(pt):
     user = getpass.getuser()
     if(pt == "~/"):
         abs_path = f"C:/User/{user}"
     else:
         abs_path = os.path.abspath(pt)
-    print("Timestamp File-name Hash-code Size File-path")
+    print("Timestamp   File-name   Hash-code   Size   File-path")
     for root, dirs, files in os.walk(abs_path):
             for filo in files:
                 try:
                     full_path= os.path.join(root, filo)
                     hash_value = hash_co(full_path)
-                    print(f"{get_time()} {filo} {hash_value} {os.path.getsize(full_path)} {full_path}")
+                    print(f"{get_time()} {filo} {hash_value}   {os.path.getsize(full_path)}   {full_path}")
                     sleep(1.5)
                 except Exception as msg:
                     print(msg)
                     continue
-## Getting the hash code.
+# Get the hash code
 def hash_co(fn):
     md_hash = hashlib.md5()
     with open(fn, "rb") as f:

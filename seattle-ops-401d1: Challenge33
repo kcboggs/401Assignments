@@ -1,1 +1,34 @@
+#!/user/bin/env python3
+#------------------------------------------------------#
+# Script Name                Ops Challenge 32
+# Author                     Kimberley Cabrera-Boggs
+# Date of last revision      November 17, 2020
+# Description of purpose     Malware Detection Part 2
+#------------------------------------------------------#
+#----------------------Import Libraries----------------#
+import os
+import sys
+import glob
+import fnmatch
+import hashlib
+from pathlib import Path
+#--------------------------Variables-------------------#
+# Prompt the user to type in a file name to search for.
+fileName = input("Enter a file name ")
+# Prompt the user for a directory to search in.
+dirName = input("Enter a directory to search in ")
+#--------------------------Function--------------------#
+def hash_f(fileName):
+    h = hashlib.sha1()
+with open(fileName, 'rb') as file:
+    chunk = 0
+    while chunk !=b'':
+        chunk = file.read(1024)
+#         h = update(chunk)
+# return h.hexidigest()
 
+# message = hash_file("Myfile.txt")
+# print(message)
+
+for path in Path('.').rglob('*.*'):
+    print(path)

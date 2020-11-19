@@ -1,5 +1,6 @@
-import os
-import requests, argparse, os, time
+  
+#!/user/bin/env python3
+
 """
 Copyright (C) 21 Feb 20: Eduard Marian
     This program is free software: you can redistribute it and/or modify
@@ -16,6 +17,9 @@ Copyright (C) 21 Feb 20: Eduard Marian
     eduard_marian@protonmail.com
     Use at your own risk
 """
+
+import os
+import requests, argparse, os, time
 
 # ERROR PROOF FUNCTION TO SEE IF API IS A 64 ALPHANUMERIC CODE
 def checkkey(ckey):

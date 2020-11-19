@@ -38,7 +38,8 @@ _Hard skills_
 * Programming languages  
 * ISO standards  
 * COBIT and ITIL framework  
-* Cybersecurity systems and standards  
+* Cybersecurity systems and standards   
+
 _Soft skills_
 * Organization  
 * Analysis  

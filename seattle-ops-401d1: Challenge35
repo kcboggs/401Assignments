@@ -1,0 +1,14 @@
+-- HEAD --
+description = [[
+look for open port
+]] 
+author = "Kim Boggs"
+-- RULE --
+portrule = function(host, port)
+        return port.protocol == "tcp"
+                and port.state == "open"
+end
+-- ACTION --
+action = function(host, port)
+        return "This port is open!"
+end

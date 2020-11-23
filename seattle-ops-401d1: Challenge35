@@ -3,6 +3,7 @@ description = [[
 look for open port
 ]] 
 author = "Kim Boggs"
+date = "11/20/2020"
 -- RULE --
 portrule = function(host, port)
         return port.protocol == "tcp"

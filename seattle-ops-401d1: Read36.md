@@ -10,7 +10,20 @@ the attacker can fully compromise their interaction with the application."
 * Stored XSS, where the malicious script comes from the website's database.  
 * DOM-based XSS, where the vulnerability exists in client-side code rather than server-side code.  
 ### Reflected cross-site scripting
-simplest variety of cross-site scripting. It arises when an application receives data in an HTTP request and includes that data within the immediate response in an unsafe way.
+simplest variety of cross-site scripting. It arises when an application receives data in an HTTP request and includes that data within the   immediate response in an unsafe way.  
+### What can XSS be used for?
+**An attacker who exploits a cross-site scripting vulnerability is typically able to:**
+* Impersonate or masquerade as the victim user.  
+* Carry out any action that the user is able to perform.  
+* Read any data that the user is able to access.  
+* Capture the user's login credentials.  
+* Perform virtual defacement of the web site.  
+* Inject trojan functionality into the web site.  
+### Impact of XSS vulnerabilities
+**he actual impact of an XSS attack generally depends on the nature of the application, its functionality and data, and the status of the compromised user. For example:**  
+* In a brochureware application, where all users are anonymous and all information is public, the impact will often be minimal.  
+* In an application holding sensitive data, such as banking transactions, emails, or healthcare records, the impact will usually be serious.  
+* If the compromised user has elevated privileges within the application, then the impact will generally be critical, allowing the attacker to take full control of the vulnerable application and compromise all users and their data.  
 
 
 

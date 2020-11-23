@@ -24,6 +24,11 @@ simplest variety of cross-site scripting. It arises when an application receives
 * In a brochureware application, where all users are anonymous and all information is public, the impact will often be minimal.  
 * In an application holding sensitive data, such as banking transactions, emails, or healthcare records, the impact will usually be serious.  
 * If the compromised user has elevated privileges within the application, then the impact will generally be critical, allowing the attacker to take full control of the vulnerable application and compromise all users and their data.  
+### How to prevent XSS attacks
+* Filter input on arrival. At the point where user input is received, filter as strictly as possible based on what is expected or valid input.  
+* Encode data on output. At the point where user-controllable data is output in HTTP responses, encode the output to prevent it from being interpreted as active content. Depending on the output context, this might require applying combinations of HTML, URL, JavaScript, and CSS encoding.  
+* Use appropriate response headers. To prevent XSS in HTTP responses that aren't intended to contain any HTML or JavaScript, you can use the Content-Type and X-Content-Type-Options headers to ensure that browsers interpret the responses in the way you intend.  
+* Content Security Policy. As a last line of defense, you can use Content Security Policy (CSP) to reduce the severity of any XSS vulnerabilities that still occur.  
 
 
 

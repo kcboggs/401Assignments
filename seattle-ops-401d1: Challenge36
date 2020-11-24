@@ -1,0 +1,72 @@
+#!/user/bin/env python3
+#------------------------------------------------------#
+# Script Name                Ops challenge 36
+# Author                     Kimberley Cabrera-Boggs
+# Date of last revision      November 23, 2020
+# Description of purpose     Malware Detection Part 3
+#------------------------------------------------------#
+print("""
+
+███████╗██╗███╗   ██╗ ██████╗ ███████╗██████╗ ██████╗ ██████╗ ██╗███╗   ██╗████████╗██╗███╗   ██╗ ██████╗ 
+██╔════╝██║████╗  ██║██╔════╝ ██╔════╝██╔══██╗██╔══██╗██╔══██╗██║████╗  ██║╚══██╔══╝██║████╗  ██║██╔════╝ 
+█████╗  ██║██╔██╗ ██║██║  ███╗█████╗  ██████╔╝██████╔╝██████╔╝██║██╔██╗ ██║   ██║   ██║██╔██╗ ██║██║  ███╗
+██╔══╝  ██║██║╚██╗██║██║   ██║██╔══╝  ██╔══██╗██╔═══╝ ██╔══██╗██║██║╚██╗██║   ██║   ██║██║╚██╗██║██║   ██║
+██║     ██║██║ ╚████║╚██████╔╝███████╗██║  ██║██║     ██║  ██║██║██║ ╚████║   ██║   ██║██║ ╚████║╚██████╔╝
+╚═╝     ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═══╝ ╚═════╝    
+Part 1
+""")
+#----------------------Import Libraries----------------#
+import os   
+import sys
+import time 
+import socket 
+import subprocess 
+#--------------------------Function--------------------#
+def interface():
+    print("""
+    what do you want to perform
+    1) Banner Scanning
+    2) Exit
+    """)
+    user_input = input()
+    if(user_input == "1"):
+        user_choice()
+    else:
+        print("exiting...")
+        time.sleep(2)
+        exit(0)
+#--------------------------Function--------------------#
+# -sV 10.0.0.5
+def user_choice():
+    ip_address = input("Enter ip/url to scan ")
+    port = input("Enter port to scan ")
+    print("==========Netcat==========")
+    net_cat(ip_address, port)
+    print("==========Telnet==========")
+
+    tel_net(ip_address, port)
+    print("==========Nmap==========")
+    nmapping(ip_address)
+def net_cat(ip_address, port):
+    process2 = subprocess.Popen(["nc", ip_address, port])
+    try:
+        process2.wait(timeout=3)
+    except:
+        process2.kill()
+    time.sleep(1)
+def tel_net(ip_address, port):
+    process1 = subprocess.Popen(["telnet", ip_address, port])
+    try:
+        process1.wait(timeout=3)
+    except:
+        process1.kill()
+    time.sleep(1)
+def nmapping(ip_address):
+    process = subprocess.Popen(["nmap", "-sV", ip_address])
+    try:
+        process.wait(timeout=3)
+    except:
+        process.kill()
+    time.sleep(1)
+
+interface()

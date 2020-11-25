@@ -31,6 +31,7 @@ print("""
 
 """)
 #----------------------Import Libraries----------------#
+import os
 import requests
 #--------------------------Function--------------------#
 url = input("Enter target site:") 
@@ -39,14 +40,14 @@ myFirstcookie = response.cookies
 print(response.cookies)
 
 # Send the cookie back to the site and receive a HTTP response
-cookies_jar = requests.cookies.RequestsCookieJar()
-session = requests.session()
-print(session)
+cookiemonsterhtml = requests.get(targetsite, cookies=cookie)
+website = cookiemonsterhtml.text
 
 # Generate a .html file to capture the contents of the HTTP response
+with open ('cookiemonster.html', 'w') as file:file.write(website)
 
-receive = requests.get('https://www.google.com')
-with open(r'cookie.html','wb') as f:
-    f.write(receive.content)
+# Print to screen that website is opening
+print("mmmm, num num me like cookie...")
 
 # Open it with Firefox
+os.system("firefox /home/osboxes/cookiemonster.html")

@@ -33,7 +33,7 @@ print("""
 #----------------------Import Libraries----------------#
 import os
 import requests
-#--------------------------Function--------------------#
+#--------------------------variable--------------------#
 url = input("Enter target site:") 
 response = requests.get(url)
 myFirstcookie = response.cookies
@@ -51,3 +51,4 @@ print("mmmm, num num me like cookie...")
 
 # Open it with Firefox
 os.system("firefox /home/osboxes/cookiemonster.html")
+#----------------------------End-----------------------#

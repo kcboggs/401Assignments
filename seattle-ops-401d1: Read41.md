@@ -60,3 +60,5 @@ _Government and Private based_
 1. Jane’s Information Group (http://www.janes.com) is a British company founded in 1898. Jane’s is a leading provider that specializes in military, terrorism, state stability, serious and organized crime, proliferation and procurement intelligence, aerospace, and transportation subjects  
 2. The Economist Intelligence Unit (https://www.eiu.com/home.aspx) is the business intelligence, research, and analysis division of the British Economist Group.  
 3. Oxford Analytica (http://www.oxan.com) is a relatively small OSINT firm compared with the previous two. Oxford Analytica specializes in geopolitics and macroeconomics subjects.  
+
+https://www.secjuice.com/introduction-to-open-source-intelligence-osint/

@@ -44,4 +44,16 @@ https://www.imperva.com/learn/application-security/penetration-testing/
 
 # An Introduction To Open Source Intelligence (OSINT) Gathering
 ### OSINT types
-1. The Internet, which includes the following and more: forums, blogs, social networking sites, video-sharing sites like YouTube.com, wikis, Whois records of registered domain names, metadata and digital files, dark web resources, geolocation data, IP addresses, people search engines, and anything that can be found online.
+1. The Internet, which includes the following and more: forums, blogs, social networking sites, video-sharing sites like YouTube.com, wikis, Whois records of registered domain names, metadata and digital files, dark web resources, geolocation data, IP addresses, people search engines, and anything that can be found online.  
+2. Traditional mass media (e.g., television, radio, newspapers, books, magazines).  
+3. Specialized journals, academic publications, dissertations, conference proceedings, company profiles, annual reports, company news, employee profiles, and résumés.  
+4. Photos and videos including metadata    
+5. Geospatial information (e.g., maps and commercial imagery products)  
+
+### OSINT Organizations
+_Government and Private based_
+**Government Organizations**
+1. Open Source Center: controlled by U.S. government  
+2. BBC Monitoring (https://monitoring.bbc.co.uk/login) is a department within the British Broadcasting Corporation (BBC) that monitors foreign media worldwide. BBC Monitoring is directed by the BBC and offers its services on a subscription basis to interested parties such as commercial organizations and UK official bodies.
+
+

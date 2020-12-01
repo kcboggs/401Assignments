@@ -52,8 +52,11 @@ https://www.imperva.com/learn/application-security/penetration-testing/
 
 ### OSINT Organizations
 _Government and Private based_
-**Government Organizations**
+**Government Organizations**  
 1. Open Source Center: controlled by U.S. government  
 2. BBC Monitoring (https://monitoring.bbc.co.uk/login) is a department within the British Broadcasting Corporation (BBC) that monitors foreign media worldwide. BBC Monitoring is directed by the BBC and offers its services on a subscription basis to interested parties such as commercial organizations and UK official bodies.
 
-
+**Private Sector**
+1. Jane’s Information Group (http://www.janes.com) is a British company founded in 1898. Jane’s is a leading provider that specializes in military, terrorism, state stability, serious and organized crime, proliferation and procurement intelligence, aerospace, and transportation subjects  
+2. The Economist Intelligence Unit (https://www.eiu.com/home.aspx) is the business intelligence, research, and analysis division of the British Economist Group.  
+3. Oxford Analytica (http://www.oxan.com) is a relatively small OSINT firm compared with the previous two. Oxford Analytica specializes in geopolitics and macroeconomics subjects.  

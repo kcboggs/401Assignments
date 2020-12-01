@@ -18,6 +18,8 @@ scan the entirety of the code in a single pass.
 as it provides a real-time view into an application’s performance.  
 
 3. Gaining Access
-This stage uses web application attacks, such as cross-site scripting, SQL injection and backdoors, to uncover a target’s       
-vulnerabilities.     
+This stage uses web application attacks, such as cross-site scripting, SQL injection and backdoors, to uncover a target’s vulnerabilities. 
 Testers then try and exploit these vulnerabilities, typically by escalating privileges, stealing data, intercepting traffic, etc., to understand the damage they can cause.
+
+4. Maintaining access  
+The goal of this stage is to see if the vulnerability can be used to achieve a persistent presence in the exploited system— long enough for  a bad actor to gain in-depth access. 

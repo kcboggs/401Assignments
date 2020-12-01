@@ -40,3 +40,8 @@ The goal of this stage is to see if the vulnerability can be used to achieve a p
 ### Penetration testing and web application firewalls
 ***Penetration testing and WAFs are exclusive, yet mutually beneficial security measures.***
 
+https://www.imperva.com/learn/application-security/penetration-testing/
+
+# An Introduction To Open Source Intelligence (OSINT) Gathering
+### OSINT types
+1. The Internet, which includes the following and more: forums, blogs, social networking sites, video-sharing sites like YouTube.com, wikis, Whois records of registered domain names, metadata and digital files, dark web resources, geolocation data, IP addresses, people search engines, and anything that can be found online.

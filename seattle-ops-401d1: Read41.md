@@ -22,4 +22,21 @@ This stage uses web application attacks, such as cross-site scripting, SQL injec
 Testers then try and exploit these vulnerabilities, typically by escalating privileges, stealing data, intercepting traffic, etc., to understand the damage they can cause.
 
 4. Maintaining access  
-The goal of this stage is to see if the vulnerability can be used to achieve a persistent presence in the exploited system— long enough for  a bad actor to gain in-depth access. 
+The goal of this stage is to see if the vulnerability can be used to achieve a persistent presence in the exploited system— long enough for  a bad actor to gain in-depth access. The idea is to imitate advanced persistent threats, which often remain in a system for months in order  to steal an organization’s most sensitive data.
+
+5. Analysis  
+***The results of the penetration test are then compiled into a report detailing:****
+* Specific vulnerabilities that were exploited  
+* Sensitive data that was accessed  
+* The amount of time the pen tester was able to remain in the system undetected  
+
+### Penetration testing methods
+* External Testing  
+* Internal Testing  
+* Blind Testing  
+* Double-blind Testing  
+* Targeted Testing  
+
+### Penetration testing and web application firewalls
+***Penetration testing and WAFs are exclusive, yet mutually beneficial security measures.***
+

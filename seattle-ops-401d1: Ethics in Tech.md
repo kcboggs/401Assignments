@@ -45,5 +45,5 @@ Workplace ethics refers to the way employees in an organization govern themselve
 ## Ethics in Technology  
 Technology ethics is the application of ethical thinking to the practical concerns of technology.
 ## Tech Company Principles  
-
+Communication is a vital principle in any technological setting, conflict resolution, time management, resilience and patience
 

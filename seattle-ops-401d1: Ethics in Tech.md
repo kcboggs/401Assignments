@@ -30,7 +30,15 @@
 4.1 Uphold, promote, and respect the principles of the Code    
 4.2 Treat violations of the Code as inconsistent with membership in the ACM  
 https://www.acm.org/code-of-ethics  
-
+### Software Engineering Code of Ethics and Professional Practice    
+1. PUBLIC   
+2. CLIENT AND EMPLOYER  
+3. PRODUCT      
+4. JUDGMENT    
+5. MANAGEMENT    
+6. PROFESSION   
+7. COLLEAGUES    
+8. SELF  
 https://ethics.acm.org/code-of-ethics/software-engineering-code/
 
 ## Ethics in the workplace

@@ -38,10 +38,10 @@ https://www.acm.org/code-of-ethics
 5. MANAGEMENT    
 6. PROFESSION   
 7. COLLEAGUES    
-8. SELF  
+8. SELF    
 https://ethics.acm.org/code-of-ethics/software-engineering-code/
 ## Ethics in the workplace
-
+Workplace ethics refers to the way employees in an organization govern themselves and their overall work attitude, but it can also refer to the morality, or lack thereof, permeating a workplace. 
 ## Ethics in Technology  
 
 ## Tech Company Principles  

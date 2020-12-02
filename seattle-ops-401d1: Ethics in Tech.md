@@ -40,7 +40,6 @@ https://www.acm.org/code-of-ethics
 7. COLLEAGUES    
 8. SELF  
 https://ethics.acm.org/code-of-ethics/software-engineering-code/
-
 ## Ethics in the workplace
 
 ## Ethics in Technology  

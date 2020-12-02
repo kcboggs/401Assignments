@@ -43,7 +43,7 @@ https://ethics.acm.org/code-of-ethics/software-engineering-code/
 ## Ethics in the workplace
 Workplace ethics refers to the way employees in an organization govern themselves and their overall work attitude, but it can also refer to the morality, or lack thereof, permeating a workplace. 
 ## Ethics in Technology  
-
+Technology ethics is the application of ethical thinking to the practical concerns of technology.
 ## Tech Company Principles  
 
 

@@ -1,8 +1,17 @@
 #!/usr/bin/python3
+#----------------------------------------------------#
+# Script Name                Ops Challenge 44
+# Author                     Kimberley Cabrera-Boggs
+# Date of last revision      December 07, 2020
+# Description of purpose     Port Scan
+#----------------------------------------------------#
+#------------------Import Libriaries-----------------#
 import socket
+#-------------------Variable-------------------------#
 sockmod = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 timeout = 3000
 sockmod.settimeout(timeout)
+#-------------------Function-------------------------#
 hostip = input("What Ip address? ")
 port = input("What Port? ")
 def portScanner(portno):
@@ -10,4 +19,6 @@ def portScanner(portno):
         print("Port closed")
     else:
         print("Port open")
+#-----------------------Main------------------------#
 portScanner(port)
+#-----------------------End-------------------------#
